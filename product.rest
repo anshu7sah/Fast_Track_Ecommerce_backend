@@ -1,0 +1,42 @@
+### create product--Admin
+Post http://localhost:4000/api/v1/product/new
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name":"Computer",
+    "price":55000,
+    "description":"Wonderful computer",
+    "category":"Computer",
+    "images":{
+        "public_id":"imageid",
+        "url":"imageid"
+    }
+}
+
+### get all products
+GET http://localhost:4000/api/v1/products
+Accept: application/json
+
+###get product details
+GET http://localhost:4000/api/v1/product/<productid>
+Accept: application/json
+
+### Update product
+PUT http://localhost:4000/api/v1/product/<productid>
+Accept: application/json
+Content-Type: application/json
+{
+    "name":"Laptop",
+    "price":60000,
+    "description":"Wonderful computer",
+    "category":"Computer",
+    "images":{
+        "public_id":"imageid",
+        "url":"imageid"
+    }
+}
+
+### Delete product--Admin
+DELETE http://localhost:4000/api/v1/product/<productid>
+Accept: application/json
